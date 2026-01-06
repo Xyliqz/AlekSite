@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alek Official Fan Certified Troll Site</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Comic Sans MS, Impact, Arial, sans-serif;
+      background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+      background-size: 400% 400%;
+      animation: bgMove 6s infinite alternate;
+      color: #000;
+      overflow-x: hidden;
+    }
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.8);
+      border-bottom: 8px dashed red;
+    }
+    header h1 {
+      font-size: 4rem;
+      text-shadow: 3px 3px #ff0000;
+      animation: shake 0.4s infinite alternate;
+    }
+    @keyframes shake {
+      from { transform: rotate(-2deg); }
+      to { transform: rotate(2deg); }
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .container {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 6px solid black;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 10px 10px 0 #000;
+      transform: rotate(var(--r));
+    }
+    .card img {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border: 4px solid red;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: yellow;
+      border: 4px solid black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn:hover { background: lime; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: black;
+      color: white;
+      font-size: 1.2rem;
+    }
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      background: red;
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px 0;
+    }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 10s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+      .jumpscare {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+    .jumpscare img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      animation: zoom 0.3s linear;
+    }
+    @keyframes zoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee">
+    <span>🚨 THIS IS A VERY SERIOUS WEBSITE ABOUT ALEK 🚨 ABSOLUTELY NOT FAKE 🚨 100% REAL 🚨</span>
+  </div>
+
+  <header>
+    <h1>ALEK</h1>
+    <div class="subtitle">Streamer • Mentally Challenged • Professional Yapper</div>
+  </header>
+
+  <section class="container">
+    <div class="card" style="--r:5deg">
+      <h2>DO NOT CLICK</h2>
+      <p>This button is 100% safe<br>(trust)</p>
+      <div class="btn" onclick="jumpscare()">CLICK ME</div>
+    </div>
+    <div class="card" style="--r:-2deg">
+      <img src="alek2.png" alt="Alek 1" />
+      <h2>Certified Dumbass</h2>
+      <div class="btn" onclick="alert('Alek approved this (maybe)')">FACT CHECK</div>
+    </div>
+
+    <div class="card" style="--r:3deg">
+      <img src="https://via.placeholder.com/400x300?text=Alek+Photo+2" alt="Alek 2" />
+      <h2>Streamer Form</h2>
+      <p>+10 FPS
+        <br>+0 Game Sense
+        <br>+100 Ego</p>
+      <div class="btn" onclick="playSound()">POWER UP</div>
+    </div>
+
+    <div class="card" style="--r:-4deg">
+      <img src="alek3.png" alt="Alek meme" />
+      <h2>Why he MIGHT be mentally challenged </h2>
+      <p>"proof:"</p>
+      <div class="btn" onclick="spawnAlek()">SPAWN ALEK</div>
+    </div>
+
+    <div class="card" style="--r:2deg">
+      <h2>Alek Facts</h2>
+      <p>• Always says "last game"<br>
+         • MIGHT be gay<br>
+         • he is dumbass<br>
+         • His neighbours hate him</p>
+    </div>
+  </section>
+
+    <div class="jumpscare" id="jumpscare">
+    <img src="alek.png" alt="Alek jumpscare" />
+  </div>
+
+  <footer>
+  <br>
+    © Xyliqz 2026
+  </footer>
+
+  <audio id="sfx" src="https://www.myinstants.com/media/sounds/windows-error.mp3"></audio>
+  <audio id="scream" src="https://www.myinstants.com/media/sounds/scream.mp3"></audio>
+
+  <script>
+    function playSound() {
+      document.getElementById('sfx').play();
+    }
+    function jumpscare() {
+      const j = document.getElementById('jumpscare');
+      const scream = document.getElementById('scream');
+      j.style.display = 'flex';
+      scream.currentTime = 0;
+      scream.play();
+      setTimeout(() => {
+        j.style.display = 'none';
+      }, 800);
+    }
+
+    function spawnAlek() {
+      const img = document.createElement('img');
+      img.src = 'alek4.png';
+      img.style.position = 'fixed';
+      img.style.width = '60px';
+      img.style.height = '60px';
+      img.style.objectFit = 'cover';
+      img.style.left = Math.random() * (window.innerWidth - 60) + 'px';
+      img.style.top = Math.random() * (window.innerHeight - 60) + 'px';
+      img.style.zIndex = 9999;
+      document.body.appendChild(img);
+      setTimeout(() => img.remove(), 3000);
+    }
+  </script>
+
+</body>
+</html>
